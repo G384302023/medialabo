@@ -1,0 +1,23 @@
+a:link {
+    color: blue;
+}
+
+a:hover {
+    text-decoration: none;
+    color: green;
+}
+
+h1 {
+    color: blue;
+    border-bottom-style: dotted;
+}
+
+h2 {
+    color: white;
+    background-color: rgb(210, 213, 60);
+}
+
+h3 {
+    color: brown;
+    border-bottom-style: solid;
+}
