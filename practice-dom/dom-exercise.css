@@ -1,0 +1,20 @@
+div#phototable {
+	display: grid; 
+	grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 250px;
+    width: 400px;
+}
+
+div#phototable > p {
+	border: 1px solid #efefef;
+	
+}
+
+p {
+	text-emphasis: sesame green;
+}
+
+div#phototable > p > img {
+	display: block;
+	width: 100%;
+}
