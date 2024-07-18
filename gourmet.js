@@ -201,13 +201,6 @@ let data = {
 
 /////////// 課題3-2 ここからプログラムを書こう
 
-// dataオブジェクトの中のデータ項目をコンソールに出力する
-console.log("API Version:", data.results.api_version);
-console.log("Results Available:", data.results.results_available);
-console.log("Results Returned:", data.results.results_returned);
-console.log("Results Start:", data.results.results_start);
-
-// 各店舗の情報を出力する
 data.results.shop.forEach(shop => {
     console.log("============================");
     console.log("店舗名:", shop.name);
@@ -218,3 +211,61 @@ data.results.shop.forEach(shop => {
     console.log("定休日:", shop.close);
     console.log("平均予算:", shop.budget.average);
 });
+
+//課題4-2は要素を作ってそれをHTMLのdiv#resultに入れる
+let a1 = document.querySelector('div#result');
+let p = document.createElement('a1');
+
+
+
+
+function displayResult(){
+  let i = document.querySelector('intput[name="store"]');
+  let store = i.value;
+  console.log('検索キー:' + store);
+}
+
+
+
+
+
+// 通信を開始する処理
+function sendRequest() {
+    // URL を設定
+    let url = "https://www.nishita-lab.org/web-contents/jsons/hotpepper/"+ G001+".json";
+
+
+    // 通信開始
+    axios.get(url)
+        .then(showResult)   // 通信成功
+        .catch(showError)   // 通信失敗
+        .then(finish);      // 通信の最後の処理
+}
+
+// 通信が成功した時の処理
+function showResult(resp) {
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+    print(data);
+
+    // data をコンソールに出力
+    console.log(data);
+
+    // data.x を出力
+    console.log(data.x);
+}
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+    console.log(err);
+}
+
+// 通信の最後にいつも実行する処理
+function finish() {
+    console.log('Ajax 通信が終わりました');
+}
