@@ -1,3 +1,4 @@
+/* 1文目「このページの情報は．．」 */
 p {
     color: navy;
 }
@@ -5,49 +6,35 @@ p {
 p.info {
     font-size: small;
     background-color: #dfdfdf;
-    padding: 5px;
 }
 
 h1 {
     background-color: #7f7fcf;
     color: white;
-    text-shadow: 2px 2px 4px navy;
-    padding: 10px;
-    text-align: center;
+    text-shadow: 2px 2px navy;
 }
 
 h2 {
+    border: solid 1px black;
     margin: 5px;
     font-family: cursive;
     color: #3f3faf;
-    background: linear-gradient(0.25turn, white, #ffefaf);
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
+    background: linear-gradient(to bottom, white, #ffefaf);
 }
 
 div#zentai {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-}
-
-.grid-item {
-    background-color: #ffefaf;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    grid-gap: 10px;
+    width: 1024px;
     height: 200px;
-    font-family: 'Arial', sans-serif;
 }
 
-img.sign {
-    float: right;
-    width: 100px;
-    height: 100px;
-    margin-left: 20px;
+div#zentai > div {
+    padding: 5px;
+    background-color: #ffefaf;
+}
+
+img.firefox-icon {
+    float: left;
 }
